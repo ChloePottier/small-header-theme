@@ -6,3 +6,12 @@ Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier/small-header-theme.git
 Text Domain: akaleya-small-header-theme*/
+body{
+    margin: 0;
+}
+
+
+
+.display-flex{display: flex;}
+.display-block{display: block;}
+.display-none{display: none;}
