@@ -2,7 +2,9 @@
 require 'hooks.php';
 function wp_styles_scripts(){
     wp_enqueue_script('jquery');
-    wp_enqueue_style('print', get_template_directory_uri() . '/assets/print.css', array(), '1.0', 'print');
+    wp_enqueue_style('bootstrap-grid', get_template_directory_uri() . '/assets/css/bootstrap/bootstrap-grid.min.css');
+    wp_enqueue_script('bootstrap-grid-js', get_template_directory_uri() . '/assets/css/bootstrap/bootstrap-grid.min.js', array('jquery','popper'), 1, true);
+    wp_enqueue_style('print', get_template_directory_uri() . '/assets/css/print.css', array(), '1.0', 'print');
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 

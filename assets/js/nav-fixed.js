@@ -1,7 +1,6 @@
 window.onscroll = function() {
     stickyToScroll();
 }
-
 let navbar = document.getElementById('navbar');
 let navbarTop = document.getElementById('navbarTop');
 let sticky = navbar.offsetTop;
@@ -11,10 +10,10 @@ let subMenu = document.querySelectorAll('ul.sub-menu');
 function stickyToScroll() {
     if (window.pageYOffset > sticky ) {
         navbar.classList.add('fondu');
-        navbar.classList.add('position-fixed');
+        navbar.classList.add('sticky');
     } else {
         navbar.classList.remove('fondu');
-        navbar.classList.remove('position-fixed');
+        navbar.classList.remove('sticky');
     }
 }
 
