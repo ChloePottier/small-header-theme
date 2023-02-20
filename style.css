@@ -6,14 +6,18 @@ Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier/small-header-theme.git
 Text Domain: akaleya-small-header-theme*/
-#wpadminbar{display: none!important;}
+/* #wpadminbar{display: none!important;visibility: hidden;} */
 body{ font-family: Helvetica, Arial, sans-serif;}
    
 img.custom-logo{height: 80px; width: auto;}
 
 nav li{list-style: none;}
-nav a{text-decoration: none;}
-
+.text-decoration-none, nav a{text-decoration: none;}
+#navigation li,#menu-footer li{padding-bottom:1rem;}
+#menu-footer,.fw-bold{font-weight: bold;}
+#menu-social-link li,#not-found{font-size: 2rem;}
+#menu-social-link li{padding-right: 1rem;}
+#menu-social-link li:last-child{padding-right: 0;}
 /* burger */
 .fondu{ animation: 0.5s fondu linear;
     background: #fff;
@@ -53,7 +57,7 @@ nav a{text-decoration: none;}
 .sticky { position: fixed!important; top: 0; width: 100%; z-index: 1500;}
 
 /* content */
-.content-area{height: auto; min-height: 200vh;}
+.content-area{height: auto; min-height: 70vh;}
 footer #copyrightinfo{font-size: .8rem!important;}
 
 

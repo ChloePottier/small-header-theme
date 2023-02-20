@@ -19,27 +19,26 @@
         <section class='container-fluid' style='background:red;'>
             <div class='container'>
                 <div class='row'>
-                    <div class='col-6'>
+                    <div class='col-6 py-2'>
                     <?php if (function_exists('the_custom_logo')) {
                             the_custom_logo();
                         }
                         //do_action('site_info'); 
                         ?>
                     </div>
-                    <div class='col-6'>
+                    <div class='col-6 d-none d-lg-flex'>
                         Contacts
+                    </div>
+                    <div class='col-6 d-flex d-lg-none justify-content-end'>
+                        <?php get_template_part('template-parts/navigation/navigation', 'burger'); ?>
                     </div>
                 </div>
             </div>
         </section>
-        <section class='container-fluid' id='navbar'>
+        <section class='container-fluid  d-none d-lg-flex' id='navbar'>
             <div class='container' id='navbarTop'>
-                <div class='row'>
-                  
-                    <?php
-                    get_template_part('template-parts/navigation/navigation', 'burger');
-                    get_template_part('template-parts/navigation/navigation', 'top');
-                    ?>
+                <div class='row py-2'>
+                    <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
                 </div>
             </div>
         </section>
