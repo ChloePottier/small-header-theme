@@ -11,3 +11,4 @@ add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
     add_filter('show_admin_bar', '__return_false');
 // }
 add_action( 'widgets_init', 'contact_widgets_init' );
+add_action( 'contact_add_to_header', 'contact_header' );

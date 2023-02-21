@@ -32,7 +32,7 @@ function small_header_theme_site_info(){
     $name = get_bloginfo('name');
     $description = get_bloginfo('description');
     if ($name != '' or $description != '') :
-        echo '<div class="bloginfo ps-2">';
+        echo '<div class="bloginfo ps-2 my-auto">';
         if ($name != '') :
             echo '<h1 class="site-name">' . $name . '</h1>';
         endif;
@@ -59,16 +59,35 @@ function special_nav_class($classes, $item){
     }
     return $classes;
 }
-
+// Widget contact - si admi,istrable
 function contact_widgets_init() {
     register_sidebar( array(
     
      'name' => 'Contacts en entête',
      'id' => 'contact-header',
-     'before_widget' => '<div class="zone-contact">',
+     'before_widget' => '<div class="zone-contact d-flex ms-auto">',
      'after_widget' => '</div>',
      ) );
      
      }
-    
-    
+   
+// contact si pas administrable
+    function contact_header(){
+        echo'<div class="contact-header ">
+        <div class="d-flex mb-3">
+            <div class="contact-icon pe-2 my-2 pt-2"><i class="fa-solid fa-location-dot"></i></div>
+            <p class="pt-2 mb-0 ">2 rue du centre<br>
+                39000 Lons-le-Saunier</p>
+        </div>
+        <div class="d-flex mb-3">
+            <div class="contact-icon pe-2"><i class="fa-solid fa-phone"></i></div>
+            <a href="tel:(+33)6 33 61 57 54" class="text-decoration-none ">06 00 01 02 03</a>
+            <p></p>
+        </div>
+        <div class="d-flex mb-3">
+            <div class="contact-icon pe-2"><i class="fa-solid fa-at"></i></div>
+            <a href="'.get_site_url().'/contact" class="text-decoration-none ">mon@email.fr</a>
+            <p></p>
+        </div>
+    </div>';
+    }

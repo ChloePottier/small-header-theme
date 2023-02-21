@@ -27,9 +27,16 @@
                         ?>
                     </div>
                     <div class='col-6 d-none d-lg-flex'>
-                    <?php if ( is_active_sidebar( 'contact-header' ) ) {
-                        dynamic_sidebar('contact-header');
-                        }?>
+                    <?php //si administrable alors widget
+                        if ( is_active_sidebar( 'contact-header' ) ) {
+                            dynamic_sidebar('contact-header');
+                        }
+                    ?>
+                    <!-- si pas administrable -->
+                        <div class='zone-contact d-flex ms-auto'>
+                            <?php do_action('contact_add_to_header'); ?>
+                        </div>
+                        
                     </div>
                     <div class='col-3 d-flex d-lg-none justify-content-end'>
                         <?php get_template_part('template-parts/navigation/navigation', 'burger'); ?>
@@ -37,10 +44,10 @@
                 </div>
             </div>
         </section>
-        <section class='container-fluid d-none d-lg-flex' id='navbar'>
+        <section class='container-fluid d-none d-lg-flex no-sticky' id='navbar'>
             <div class='container' id='navbarTop'>
                 <div class='row py-2'>
-                    <div class='col-10 mx-auto'>
+                    <div class='col-12'>
                         <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
                     </div>
                 </div>
@@ -50,11 +57,14 @@
             <div class='container'>
                 <div class='row'>
                         <div class='col-10 mx-auto'>
-                            <?php
-                             if ( is_active_sidebar( 'contact-header' ) ) {
-                                dynamic_sidebar('contact-header');
-                            }
+                            <?php 
+                            // if ( is_active_sidebar( 'contact-header' ) ) {
+                            //     dynamic_sidebar('contact-header');
+                            // } 
+                            do_action('contact_add_to_header');
                             ?>
+
+
                         </div>
                 </div>
             </div>

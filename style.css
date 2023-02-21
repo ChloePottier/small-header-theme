@@ -15,21 +15,24 @@ h1.site-name{font-size: 1.3rem;}
 h2.site-slogan{font-size: 1rem;}
 #menu-footer,.fw-bold{font-weight: bold;}
 /* COLORS */
-.text-black,#navigation-lg li a,#navigation-lg li.active-menu .sub-menu li a{color:#000;}
-.text-dark-grey{color:#2e2e2e;}
-.text-grey,#navigation-lg li a:hover,#navigation-lg li.active-menu a,#navigation-lg li.active-menu .sub-menu li a:hover{color: #727272;}
+.text-black,#navigation-lg li a,#navigation-lg li.active-menu .sub-menu li a,nav.menu-footer-container a,nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a{color:#000;}
+.text-dark-grey,.content-area a:hover,#copyrightinfo a,.contact-header i{color:#454545;}
+.text-grey,#navigation-lg li a:hover,#navigation-lg li.active-menu a,#navigation-lg li.active-menu .sub-menu li a:hover,.content-area a,nav.menu-footer-container a:hover,nav.menu-social-link-container a:hover{color: #727272;}
 .text-light-grey,#nav-burger li a:hover{color: #c9c9c9;}
 .text-white,#nav-burger li a{color:#fff;}
 .bg-white{background-color: #fff;}
-/* PADDING */
+/* PADDING MARGIN */
 #menu-social-link li{padding-right: 1rem;}
 #menu-social-link li:last-child{padding-right: 0;}
+.custom-logo{margin-top: auto;margin-bottom: auto;}
 
+.custom-logo-link{display: flex;}
+.contact-header a,.contact-header p{font-size: .9rem;}
 nav li{list-style: none;}
 #nav-burger{border-bottom: solid 1px #ccc;}
 .text-decoration-none, nav a{text-decoration: none;}
 img.custom-logo{height: 80px; width: auto;}
-/* burger */
+/* burger, nav fixed, submenu */
 .fondu{ animation: 0.5s fondu linear; background: #fff;}
 @keyframes fondu{
     0% {opacity: 0;}
@@ -65,13 +68,11 @@ img.custom-logo{height: 80px; width: auto;}
 .isopen-burger1,.isopen-burger3{background-color: #fff!important;}
 .isclosed2{transform: none; width: 35px; height: 4px; display: block; margin-bottom: 6px;}
 .sticky { position: fixed!important; top: 0; width: 100%; z-index: 1500;}
-.no-sticky { position: relative!important; z-index: 1500;}
-
-
+.no-sticky{ position: relative!important; z-index: 1500;}
 
 
 /* content */
-.content-area{height: auto; min-height: 70vh;}
+.content-area{height: auto; min-height: 60vh;}
 footer #copyrightinfo{font-size: .8rem!important;}
 
 
