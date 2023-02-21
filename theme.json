@@ -4,8 +4,8 @@
         "color": {
             "palette": [  
                 {
-                    "name": "Noir",
-                    "slug": "noir",
+                    "name": "Black",
+                    "slug": "black",
                     "color": "#000000"
                 },                             
                 {
@@ -24,8 +24,8 @@
                     "color": "#c9c9c9"
                 },
                 {
-                    "name": "Blanc",
-                    "slug": "blanc",
+                    "name": "White",
+                    "slug": "white",
                     "color": "#ffffff"
                 }
             ]

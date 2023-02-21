@@ -7,21 +7,30 @@ Licence: 1.0
 License URI: https://github.com/ChloePottier/small-header-theme.git
 Text Domain: akaleya-small-header-theme*/
 /* #wpadminbar{display: none!important;visibility: hidden;} */
+/* FONT */
 body{ font-family: Helvetica, Arial, sans-serif;}
-   
-img.custom-logo{height: 80px; width: auto;}
-
-nav li{list-style: none;}
-.text-decoration-none, nav a{text-decoration: none;}
-#navigation li,#menu-footer li{padding-bottom:1rem;}
-#menu-footer,.fw-bold{font-weight: bold;}
 #menu-social-link li,#not-found{font-size: 2rem;}
+.contact-header .contact-icon i{font-size: 1.5rem!important;}
+h1.site-name{font-size: 1.3rem;}
+h2.site-slogan{font-size: 1rem;}
+#menu-footer,.fw-bold{font-weight: bold;}
+/* COLORS */
+.text-black,#navigation-lg li a,#navigation-lg li.active-menu .sub-menu li a{color:#000;}
+.text-dark-grey{color:#2e2e2e;}
+.text-grey,#navigation-lg li a:hover,#navigation-lg li.active-menu a,#navigation-lg li.active-menu .sub-menu li a:hover{color: #727272;}
+.text-light-grey,#nav-burger li a:hover{color: #c9c9c9;}
+.text-white,#nav-burger li a{color:#fff;}
+.bg-white{background-color: #fff;}
+/* PADDING */
 #menu-social-link li{padding-right: 1rem;}
 #menu-social-link li:last-child{padding-right: 0;}
+
+nav li{list-style: none;}
+#nav-burger{border-bottom: solid 1px #ccc;}
+.text-decoration-none, nav a{text-decoration: none;}
+img.custom-logo{height: 80px; width: auto;}
 /* burger */
-.fondu{ animation: 0.5s fondu linear;
-    background: #fff;
-  }
+.fondu{ animation: 0.5s fondu linear; background: #fff;}
 @keyframes fondu{
     0% {opacity: 0;}
     100%{opacity: 100;}
@@ -35,6 +44,7 @@ nav li{list-style: none;}
     background: #000;
     padding: 5rem 0 0 2rem;
 }
+#navigation li a {display:inline-block;padding-bottom: 1.2rem; font-size: 1.2rem;}
 .burger{    
     margin: 0;
     z-index: 30;
@@ -55,6 +65,10 @@ nav li{list-style: none;}
 .isopen-burger1,.isopen-burger3{background-color: #fff!important;}
 .isclosed2{transform: none; width: 35px; height: 4px; display: block; margin-bottom: 6px;}
 .sticky { position: fixed!important; top: 0; width: 100%; z-index: 1500;}
+.no-sticky { position: relative!important; z-index: 1500;}
+
+
+
 
 /* content */
 .content-area{height: auto; min-height: 70vh;}
@@ -79,6 +93,7 @@ footer #copyrightinfo{font-size: .8rem!important;}
 }
 @media (min-width: 992px) {
     #navigation-lg ul{display:flex; margin-bottom: 0;}
+    #navigation li,#menu-footer li{padding-bottom:1rem;}
     #navigation-lg a{font-weight: bold;}
     nav.menu-header-container{flex-direction: row; justify-content: center;align-items: center;}
     .menu a,.menu-down a{padding-right: 1rem;}

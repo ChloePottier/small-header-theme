@@ -28,6 +28,20 @@ function wpm_myme_types($mime_types){
     $mime_types['webp'] = 'image/webp';
     return $mime_types;
 }
+function small_header_theme_site_info(){
+    $name = get_bloginfo('name');
+    $description = get_bloginfo('description');
+    if ($name != '' or $description != '') :
+        echo '<div class="bloginfo ps-2">';
+        if ($name != '') :
+            echo '<h1 class="site-name">' . $name . '</h1>';
+        endif;
+        if ($description != '') :
+            echo '<h2 class="site-slogan mb-0">' . $description . '</h2>';
+        endif;
+        echo '</div>';
+    endif;
+}
 
 function register_nav(){
     register_nav_menus(
@@ -45,3 +59,16 @@ function special_nav_class($classes, $item){
     }
     return $classes;
 }
+
+function contact_widgets_init() {
+    register_sidebar( array(
+    
+     'name' => 'Contacts en entête',
+     'id' => 'contact-header',
+     'before_widget' => '<div class="zone-contact">',
+     'after_widget' => '</div>',
+     ) );
+     
+     }
+    
+    
