@@ -44,7 +44,7 @@
                 </div>
             </div>
         </section>
-        <section class='container-fluid d-none d-lg-flex no-sticky' id='navbar'>
+        <section class='container-fluid d-none d-lg-flex no-sticky bg-white py-2' id='navbar'>
             <div class='container' id='navbarTop'>
                 <div class='row py-2'>
                     <div class='col-12'>

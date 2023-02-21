@@ -31,6 +31,7 @@ nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a{color
 .contact-header a,.contact-header p{font-size: .9rem;}
 nav li{list-style: none;}
 #nav-burger{border-bottom: solid 1px #ccc;}
+.box-shadow{box-shadow:5px 5px 10px #c9c9c9;}
 .text-decoration-none, nav a{text-decoration: none;}
 img.custom-logo{height: 80px; width: auto;}
 /* burger, nav fixed, submenu */

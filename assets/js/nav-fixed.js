@@ -13,12 +13,14 @@ function stickyToScroll() {
     if (window.pageYOffset > sticky ) {
         navbar.classList.remove('no-sticky');
         navbar.classList.add('sticky');
+        navbar.classList.add('box-shadow');
         if (window.matchMedia('(max-width: 991px)').matches) {
             navBurger.classList.add('sticky');
         }
     } else {
         navbar.classList.remove('sticky');
         navbar.classList.add('no-sticky');
+        navbar.classList.remove('box-shadow');
         if (window.matchMedia('(max-width: 991px)').matches) {
             navBurger.classList.remove('sticky');
         }
