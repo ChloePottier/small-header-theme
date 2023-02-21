@@ -1,1 +1,4 @@
-#burger{display: none;visibility: hidden;}
+#burger, #span, footer, nav,#navbar, .no-print,.content-area img{display: none!important;visibility: hidden!important;}
+header #nav-burger .col-6 {display: flex!important; justify-content: end;}
+header #nav-burger .col-9 {width:50%;}
+h1, h2, h3, h4, h5, h6, div, p, a,span {color:#454545!important;}

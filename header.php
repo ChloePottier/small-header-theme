@@ -53,7 +53,7 @@
                 </div>
             </div>
         </section>
-        <div class='container-fluid d-flex d-lg-none pt-3'>
+        <div class='container-fluid d-flex d-lg-none pt-3 no-print'>
             <div class='container'>
                 <div class='row'>
                         <div class='col-10 mx-auto'>
