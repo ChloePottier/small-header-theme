@@ -1,4 +1,5 @@
 let burger = document.getElementById('burger');
+let menu = document.getElementById('menu');
 let navigation = document.getElementById('navigation');
 let burger1 = document.getElementById('burger1');
 let burger2 = document.getElementById('burger2');
@@ -8,7 +9,9 @@ let burger3 = document.getElementById('burger3');
         navigation.classList.toggle('display-none');
         navigation.classList.add('fondu');
         burger.classList.toggle('isopen');
+        menu.classList.toggle('isopen');
         burger1.classList.toggle('isopen-burger1');
         burger2.classList.toggle('isopen-burger2');
         burger3.classList.toggle('isopen-burger3');
 });
+
