@@ -9,6 +9,7 @@ Text Domain: akaleya-small-header-theme*/
 /* #wpadminbar{display: none!important;visibility: hidden;} */
 /* FONT */
 body{ font-family: Helvetica, Arial, sans-serif;}
+h1,h2,h3,h4,h5,h6,header,button,.button{font-family: 'Montserrat', sans-serif;}
 #menu-social-link li,#not-found{font-size: 2rem;}
 .contact-header .contact-icon i{font-size: 1.5rem!important;}
 h1.site-name{font-size: 1.3rem;}
