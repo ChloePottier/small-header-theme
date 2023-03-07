@@ -1,4 +1,4 @@
-/* 
+/* ent-area a{}
 Theme Name: Akaleya Small Header
 Author: Chloé Pottier
 Description: Thème Akaleya : Petit header contenant le logo et les contacts du client
@@ -9,7 +9,9 @@ Text Domain: akaleya-small-header-theme*/
 /* #wpadminbar{display: none!important;visibility: hidden;} */
 /* FONT */
 body{ font-family: Helvetica, Arial, sans-serif;}
-h1,h2,h3,h4,h5,h6,header,button,.button{font-family: 'Montserrat', sans-serif;}
+h1:not(header h1){font-family: 'Montserrat semibold', sans-serif;}
+h2:not(header h2),button,.button{font-family: 'Montserrat medium', sans-serif;}
+.montserrat,h3,h4,h5,h6,header{font-family: 'Montserrat', sans-serif;}
 #menu-social-link li,#not-found{font-size: 2rem;}
 .contact-header .contact-icon i{font-size: 1.5rem!important;}
 h1.site-name{font-size: 1.3rem;}
@@ -23,6 +25,7 @@ h2.site-slogan{font-size: 1rem;}
     --light-grey: #c9c9c9;
     --white: #fff;
 }
+.cont
 .text-black,#navigation-lg li a,#navigation-lg li.active-menu .sub-menu li a,nav.menu-footer-container a,
 nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a{color:var(--black);}
 .text-dark-grey,.content-area a:hover,#copyrightinfo a,.contact-header i{color:var(--dark-grey);}
@@ -31,8 +34,11 @@ nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a{color
 .text-white,#nav-burger li a{color:var(--white);}
 .bg-white{background-color: var(--white);}
 /* PADDING MARGIN */
+h2:not(header h2){padding-top: 1rem;}
 #menu-social-link li{padding-right: 1rem;}
 #menu-social-link li:last-child{padding-right: 0;}
+#navigation li,#menu-footer li{padding-bottom:1rem;}
+
 .custom-logo{margin-top: auto;margin-bottom: auto;}
 
 .custom-logo-link{display: flex;}
@@ -83,6 +89,7 @@ img.custom-logo{height: 80px; width: auto;}
 
 /* content */
 .content-area{height: auto; min-height: 60vh;}
+footer .menu-footer{font-size: .9rem;}
 footer #copyrightinfo{font-size: .8rem!important;}
 
 
@@ -104,7 +111,6 @@ footer #copyrightinfo{font-size: .8rem!important;}
 }
 @media (min-width: 992px) {
     #navigation-lg ul{display:flex; margin-bottom: 0;}
-    #navigation li,#menu-footer li{padding-bottom:1rem;}
     #navigation-lg a{font-weight: bold;}
     nav.menu-header-container{flex-direction: row; justify-content: center;align-items: center;}
     .menu a,.menu-down a{padding-right: 1rem;}

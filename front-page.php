@@ -13,7 +13,7 @@ get_header();?>
                     <div class='col-12'>
                         <h1 class='pb-3'><?php the_title(); ?></h1>
                     </div>
-                    <div class='col-12 mt-5'>
+                    <div class='col-12'>
                         <?php the_content(); ?>
                     </div>
                 </section>
