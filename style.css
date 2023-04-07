@@ -40,7 +40,7 @@ h2:not(header h2){padding-top: 2rem;}
 #navigation li,#menu-footer li{padding-bottom:1rem;}
 
 .custom-logo{margin-top: auto;margin-bottom: auto;}
-
+.vertical-align-middle,#nav-burger li a{vertical-align: middle;}
 .custom-logo-link{display: flex;}
 #logo-menu-scroll h1.site-name{font-size: .9rem;margin-top: auto; margin-bottom: auto;}
 
@@ -87,16 +87,21 @@ img.custom-logo{height: 80px; width: auto;}
 .isclosed2{transform: none; width: 35px; height: 4px; display: block; margin-bottom: 6px;}
 .sticky { position: fixed!important; top: 0; width: 100%; z-index: 1500;}
 .no-sticky{ position: relative!important; z-index: 1500;}
-.arrow-menu-down{border: none;}
-.arrow-menu-down::after{content: "▼";font-size: .8rem;}
+.arrow-menu-down,.arrow-menu-up{border: none;}
+/* .arrow-menu-down::after{content: "▼";}
+.arrow-menu-up::after{content: "▲";} 
+.arrow-menu-down::after,.arrow-menu-up::after{font-size: .8rem;margin-left: .3rem;}
+*/
+.arrow-menu-down::after{content: "+";}
+.arrow-menu-up::after{content: "-";}
+#navigation button{font-size: 1.8rem;margin-left: .3rem;background: none!important;color:var(--light-grey);}
+#navigation button:hover{color:var(--grey)}
 
 
 /* content */
 .content-area{height: auto; min-height: 60vh;}
 footer .menu-footer{font-size: .9rem;}
 footer #copyrightinfo{font-size: .8rem!important;}
-
-
 .position-fixed{position: fixed;}
 
 @media (min-width: 576px) {

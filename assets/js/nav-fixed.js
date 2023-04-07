@@ -64,13 +64,18 @@ if (window.matchMedia('(min-width: 992px)').matches) {
 
         buttonArrowDownMenu.addEventListener( 'click',function(e){
             buttonArrowDownMenu.classList.toggle(idItemParent);
-            // sous menu
+            buttonArrowDownMenu.classList.toggle('arrow-menu-down');
+            buttonArrowDownMenu.classList.toggle('arrow-menu-up');
+
+            // sous menu, mega menu
             let parentMenuActive = document.querySelectorAll('#navigation li.'+idItemParent);
             console.log(parentMenuActive);
             let subMenuActive = parentMenuActive.item(0); // récupérer dans le 1er élément de la NodeList -> <li>
             // console.log(subMenuActive);
             subMenuActive.childNodes[3].classList.toggle('display-block'); // toggle le 3ème enfant de la NodeList -> ul.sub-menu
             subMenuActive.childNodes[3].classList.toggle('display-none');
+            
+
         });
     
         
