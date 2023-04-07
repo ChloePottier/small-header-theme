@@ -23,11 +23,13 @@
             <div class='container'>
                 <div class='row'>
                     <div class='col-9 col-lg-6 py-2 d-flex'>
-                    <?php if (function_exists('the_custom_logo')) {
-                            the_custom_logo();
-                        }
-                        do_action('site_info'); 
-                        ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto'>
+                            <?php if (function_exists('the_custom_logo')) {
+                                the_custom_logo();
+                            }
+                            do_action('site_info'); 
+                            ?>
+                        </a>
                     </div>
                     <div class='col-6 d-none d-lg-flex'>
                     <?php //si administrable alors widget
@@ -50,7 +52,14 @@
         <section class='container-fluid d-none d-lg-flex no-sticky bg-white py-2' id='navbar'>
             <div class='container' id='navbarTop'>
                 <div class='row py-2'>
-                    <div class='col-12'>
+                    <div class='col'>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto'>
+                            <div class='display-none' id='logo-menu-scroll'>
+                                <?php do_action('site_name'); ?>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='col-10 d-flex align-items-center justify-content-end'>
                         <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
                     </div>
                 </div>

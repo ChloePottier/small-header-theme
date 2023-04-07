@@ -6,7 +6,7 @@ Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier/small-header-theme.git
 Text Domain: akaleya-small-header-theme*/
-/* #wpadminbar{display: none!important;visibility: hidden;} */
+#wpadminbar{display: none!important;visibility: hidden;}
 /* FONT */
 body{ font-family: Helvetica, Arial, sans-serif;}
 h1:not(header h1){font-family: 'Montserrat semibold', sans-serif;}
@@ -34,7 +34,7 @@ nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a{color
 .text-white,#nav-burger li a{color:var(--white);}
 .bg-white{background-color: var(--white);}
 /* PADDING MARGIN */
-h2:not(header h2){padding-top: 1rem;}
+h2:not(header h2){padding-top: 2rem;}
 #menu-social-link li{padding-right: 1rem;}
 #menu-social-link li:last-child{padding-right: 0;}
 #navigation li,#menu-footer li{padding-bottom:1rem;}
@@ -42,13 +42,15 @@ h2:not(header h2){padding-top: 1rem;}
 .custom-logo{margin-top: auto;margin-bottom: auto;}
 
 .custom-logo-link{display: flex;}
+#logo-menu-scroll h1.site-name{font-size: .9rem;margin-top: auto; margin-bottom: auto;}
+
 .contact-header a,.contact-header p{font-size: .9rem;}
 nav li{list-style: none;}
 #nav-burger{border-bottom: solid 1px #ccc;}
 .box-shadow{box-shadow:5px 5px 10px var(--light-grey);}
 .text-decoration-none, nav a{text-decoration: none;}
 img.custom-logo{height: 80px; width: auto;}
-/* burger, nav fixed, submenu */
+/* MENU burger, nav fixed, submenu */
 .fondu{ animation: 0.5s fondu linear; background: var(--white);}
 @keyframes fondu{
     0% {opacity: 0;}
@@ -85,6 +87,8 @@ img.custom-logo{height: 80px; width: auto;}
 .isclosed2{transform: none; width: 35px; height: 4px; display: block; margin-bottom: 6px;}
 .sticky { position: fixed!important; top: 0; width: 100%; z-index: 1500;}
 .no-sticky{ position: relative!important; z-index: 1500;}
+.arrow-menu-down{border: none;}
+.arrow-menu-down::after{content: "▼";font-size: .8rem;}
 
 
 /* content */
