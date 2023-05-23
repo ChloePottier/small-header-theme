@@ -23,9 +23,8 @@ h2.site-slogan{font-size: 1rem;}
     --light-grey: #c9c9c9;
     --white: #fff;
 }
-.cont
-.text-black,nav.menu-footer-container a,
-nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a{color:var(--black);}
+.text-black,nav.menu-footer-container a,nav.menu-social-link-container a,#copyrightinfo a:hover, .contact-header a,h1,header h1,h2,h4,h5,h6{color:var(--black);}
+/* header a h1{color:var(--black)!important;} */
 .text-dark-grey,.content-area a:hover,#copyrightinfo a,.contact-header i{color:var(--dark-grey);}
 .text-grey,.content-area a,nav.menu-footer-container a:hover,nav.menu-social-link-container a:hover{color: var(--grey);}
 .text-light-grey,#navigation li a:hover{color:var(--light-grey);}

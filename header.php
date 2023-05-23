@@ -24,7 +24,7 @@
                 <div class='row'>
                     <!-- logo principal -->
                     <div class='col-9 col-lg-6 py-2 d-flex order-first' id='logo-first'>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto'>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto' id='logo-link'>
                             <?php if (function_exists('the_custom_logo')) {
                                 the_custom_logo();
                             }
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <!-- navigation -->
-                    <div class='col-3 col-lg-10 order-lg-last d-flex justify-content-end'>
+                    <div class='col-3 col-lg-10 order-lg-last d-flex justify-content-end' id='col-nav'>
                         <?php get_template_part('template-parts/navigation/navigation', 'burger'); ?>
                     </div>
                     <!-- logo menu lg down -->
