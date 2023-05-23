@@ -46,7 +46,7 @@ function small_header_theme_site_info(){
 function register_nav(){
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu'), //Nom du menu : 'Header' dans BO (pour sub-menu.js)
+            'header-menu' => __('Header Menu'), //Nom du menu : 'Header' dans BO 
             'footer-menu' => __('Footer Menu'),
             'social-link-menu' => __('Social Link Menu'), // Nom du menu : 'Social Link' dans BO pour le style
         )
@@ -59,13 +59,14 @@ function special_nav_class($classes, $item){
     }
     return $classes;
 }
+
 // Widget contact - si admi,istrable
 function contact_widgets_init() {
     register_sidebar( array(
     
      'name' => 'Contacts en entête',
      'id' => 'contact-header',
-     'before_widget' => '<div class="zone-contact d-flex ms-auto">',
+     'before_widget' => '<div class="zone-contact d-flex mx-auto ms-lg-auto ">',
      'after_widget' => '</div>',
      ) );
      
@@ -91,3 +92,4 @@ function contact_widgets_init() {
         </div>
     </div>';
     }
+

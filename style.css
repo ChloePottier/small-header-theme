@@ -1,12 +1,10 @@
-/* ent-area a{}
-Theme Name: Akaleya Small Header
+/* Theme Name: Akaleya Small Header
 Author: Chloé Pottier
 Description: Thème Akaleya : Petit header contenant le logo et les contacts du client
 Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier/small-header-theme.git
 Text Domain: akaleya-small-header-theme*/
-#wpadminbar{display: none!important;visibility: hidden;}
 /* FONT */
 body{ font-family: Helvetica, Arial, sans-serif;}
 h1:not(header h1){font-family: 'Montserrat semibold', sans-serif;}
@@ -38,17 +36,18 @@ h2:not(header h2){padding-top: 2rem;}
 #menu-social-link li{padding-right: 1rem;}
 #menu-social-link li:last-child{padding-right: 0;}
 #navigation li,#menu-footer li{padding-bottom:1rem;}
-
 .custom-logo{margin-top: auto;margin-bottom: auto;}
 .vertical-align-middle,#nav-burger li a{vertical-align: middle;}
 .custom-logo-link{display: flex;}
 #logo-menu-scroll h1.site-name{font-size: .9rem;margin-top: auto; margin-bottom: auto;}
-
+.contact-header{margin-left: auto;margin-right: auto;}
 .contact-header a,.contact-header p{font-size: .9rem;}
 nav li{list-style: none;}
-#nav-burger{border-bottom: solid 1px #ccc;}
+.break-header{border-top: solid 1px #ccc;display: inline-block;padding: 0 100%;translate: -46%; }
+#contact-header{background:var(--white);}
 .box-shadow{box-shadow:5px 5px 10px var(--light-grey);}
 .text-decoration-none, nav a{text-decoration: none;}
+#logo-first a{text-decoration: none;}
 img.custom-logo{height: 80px; width: auto;}
 /* MENU burger, nav fixed, submenu */
 .fondu{ animation: 0.5s fondu linear; background: var(--white);}
@@ -116,12 +115,25 @@ footer #copyrightinfo{font-size: .8rem!important;}
     .row-nav{max-width:720px;}
     .nav-footer h3{font-size: 1rem!important;}
     #menu-footer a{font-size:.8rem!important;}
+    .break-header{translate: -40%; }
 
 }
 @media (min-width: 992px) {
-    #navigation-lg ul{display:flex; margin-bottom: 0;}
-    #navigation-lg a{font-weight: bold;}
-    nav.menu-header-container{flex-direction: row; justify-content: center;align-items: center;}
+    #navigation{
+        position: relative;
+        /* z-index: 20; */
+        width: 100%;
+        height: auto;
+        left: 0;
+        background: none;
+        padding: 5rem 0 0 2rem;
+    }
+    #contact-header{ display: flex; padding: 0;translate: 0%; background:transparent;}
+    /* #nav-burger li a{color:var(--black)!important;} */
+    /* #navigation-lg ul{display:flex; margin-bottom: 0;}
+    #navigation-lg a{font-weight: bold;} */
+    #navigation li a{font-weight: bold; font-size: .9rem;}
+    #menu-header{display: flex; flex-direction: row; justify-content: center;align-items: center;}
     .menu a,.menu-down a{padding-right: 1rem;}
     ul.sub-menu{position: absolute; flex-direction: column; padding:1rem; }
     ul.sub-menu li{ padding: .5rem 0;}

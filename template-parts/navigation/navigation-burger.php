@@ -4,6 +4,6 @@
         <span class='isclosed mx-auto' id='burger2'>&nbsp;</span>
         <span class='isclosed mx-auto' id='burger3'>&nbsp;</span>
     </label>
-    <div class='menu-burger display-none px-auto' id='navigation'>
+    <div class='menu-burger d-lg-flex px-auto' id='navigation'>
         <?php get_template_part('template-parts/navigation/navigation', 'items'); ?>
     </div>
