@@ -33,10 +33,10 @@
                         </a>
                     </div>
                     <!-- Séparation -->
-                    <div class='col-12 order-4 break-header'></div>
+                    <hr class='col-12 order-4 break-header'></hr>
                     <!-- contact header -->
-                    <div class=' col-12 col-lg-5 order-last order-lg-2' id='contact-header-container'>
-                        <div class='zone-contact d-flex mx-auto'>
+                    <div class=' col-12 col-lg-6 order-last order-lg-2' id='contact-header-container'>
+                        <div class='zone-contact d-flex'>
                             <?php do_action('contact_add_to_header'); ?>
                         </div>
                     </div>
