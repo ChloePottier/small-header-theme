@@ -18,7 +18,7 @@
 
 <body id='top' <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header>
+    <header id='header'>
         <section class='container-fluid' id='header-contact-nav'>
             <div class='container'>
                 <div class='row'>
