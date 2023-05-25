@@ -1,6 +1,6 @@
 /* Theme Name: Akaleya Small Header
 Author: Chloé Pottier
-Description: Thème Akaleya : Petit header contenant le logo et les contacts du client
+Description: Thème Akaleya : Petit header contenant le logo et les contacts du client + Mega menu
 Version: 1.0
 Licence: 1.0
 License URI: https://github.com/ChloePottier/small-header-theme.git
@@ -135,15 +135,8 @@ footer #copyrightinfo{font-size: .8rem!important;}
     #navigation li a,#navigation li.active-menu .sub-menu li a{color: var(--black);}
     #navigation li a:hover,#navigation li.active-menu a,#navigation li.active-menu .sub-menu li a:hover{color: var(--grey);}
     #navigation li a{font-weight: bold; font-size: .9rem;}
-
-    /* #contact-header{ display: flex; padding: 0;translate: 0%; background:transparent;} */
     .contact-header{margin-left: auto;margin-right: 0;}
-    /* #nav-burger li a{color:var(--black)!important;} */
-    /* #navigation-lg ul{display:flex; margin-bottom: 0;}
-     */
-    /* #menu-header{display: flex; flex-direction: row; justify-content: center;align-items: center;} */
-    /* .menu a,.menu-down a{padding-right: 1rem;} */
-    ul.sub-menu{position: absolute; flex-direction: column; padding-top: .5rem!important; background: var(--white);}
+    ul.sub-menu{position: absolute;padding-top: .5rem!important; background: var(--white); box-shadow:#ccc 5px 1rem 1rem;}
     ul.sub-menu li{ padding: .5rem 0;}
     ul.sub-menu li:last-child{border-bottom: none; padding: .5rem 0 0 0;}
     .sub-menu-color{background: var(--white);}
@@ -152,7 +145,6 @@ footer #copyrightinfo{font-size: .8rem!important;}
 }
 @media (min-width: 1200px) {
     .row-nav{max-width:1140px;}
-    /* .menu a,.menu-down a{padding-right: 1.5rem;} */
 }
 @media (min-width: 1400px) {
     .row-nav{max-width: 1320px;}

@@ -21,9 +21,9 @@
     <header id='header'>
         <section class='container-fluid' id='header-contact-nav'>
             <div class='container'>
-                <div class='row'>
+                <div class='row' id='row-header'>
                     <!-- logo principal -->
-                    <div class='col-9 col-lg-6 py-2 d-flex order-first' id='logo-first'>
+                    <div class='col-9 col-lg-6 py-2 order-first' id='logo-first'>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto' id='logo-link'>
                             <?php if (function_exists('the_custom_logo')) {
                                 the_custom_logo();
@@ -45,10 +45,14 @@
                         <?php get_template_part('template-parts/navigation/navigation', 'burger'); ?>
                     </div>
                     <!-- logo menu lg down -->
-                    <div class='col d-none d-lg-flex order-4'>
+                    <div class='col d-none d-lg-flex order-4' id='logo-menu-lg-down'>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto'>
                             <div class='display-none' id='logo-menu-scroll'>
-                                <?php do_action('site_name'); ?>
+                            <?php if (function_exists('the_custom_logo')) {
+                                the_custom_logo();
+                            }
+                            do_action('site_info'); 
+                            ?>
                             </div>
                         </a>
                     </div>
@@ -60,20 +64,4 @@
                 </div>
             </div>
         </section>
-        <!-- <div class='container-fluid d-flex d-lg-none pt-3 no-print' id='contact-header-bottom'>
-            <div class='container'>
-                <div class='row'>
-                        <div class='col-10 mx-auto'>
-                            <?php 
-                            // if ( is_active_sidebar( 'contact-header' ) ) {
-                            //     dynamic_sidebar('contact-header');
-                            // } 
-                            //do_action('contact_add_to_header');
-                            ?>
-
-
-                        </div>
-                </div>
-            </div>
-        </div> -->
     </header>

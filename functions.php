@@ -53,12 +53,12 @@ function register_nav(){
     );
 }
 
-function special_nav_class($classes, $item){
-    if( in_array('current-menu-item', $classes) ){
-            $classes[] = 'active-menu';
-    }
-    return $classes;
-}
+// function special_nav_class($classes, $item){
+//     if( in_array('current-menu-item', $classes) ){
+//             $classes[] = 'active-menu';
+//     }
+//     return $classes;
+// }
 
 // Widget contact - si admi,istrable
 function contact_widgets_init() {
