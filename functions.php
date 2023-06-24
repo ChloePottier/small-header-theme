@@ -15,6 +15,7 @@ function small_header_theme_setup(){
         'width'       => 300,
         'flex-width'  => true,
         'flex-height'  => true,
+        'header-text'          => array( 'site-title', 'site-description' ),
     ));
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
@@ -32,7 +33,7 @@ function small_header_theme_site_info(){
     $name = get_bloginfo('name');
     $description = get_bloginfo('description');
     if ($name != '' or $description != '') :
-        echo '<div class="bloginfo ps-2 my-auto">';
+        echo '<div class="bloginfo ps-2 py-auto">';
         if ($name != '') :
             echo '<h1 class="site-name">' . $name . '</h1>';
         endif;
@@ -74,7 +75,7 @@ function contact_widgets_init() {
    
 // contact si pas administrable
     function contact_header(){
-        echo'<div class="contact-header ">
+        echo'<div class="contact-header pt-3">
         <div class="d-flex mb-3">
             <div class="contact-icon pe-2 my-2 pt-2"><i class="fa-solid fa-location-dot"></i></div>
             <p class="pt-2 mb-0 ">2 rue du centre<br>

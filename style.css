@@ -29,7 +29,8 @@ h2.site-slogan{font-size: 1rem;}
 .text-grey,.content-area a,nav.menu-footer-container a:hover,nav.menu-social-link-container a:hover{color: var(--grey);}
 .text-light-grey,#navigation li a:hover{color:var(--light-grey);}
 .text-white,#navigation li a{color:var(--white);}
-.bg-white,header{background-color: var(--white);}
+.bg-grey,#header-nav{background: var(--light-grey);}
+.bg-white{background-color: var(--white);}
 /* PADDING MARGIN */
 h2:not(header h2){padding-top: 2rem;}
 #menu-social-link li{padding-right: 1rem;}
@@ -73,7 +74,7 @@ img.custom-logo{height: 80px; width: auto;}
     font-size: .8rem;
 }
 .display-none{display:none; visibility: hidden;}
-.display-flex{display: flex; flex-direction: column;}
+.display-flex{display: flex!important; flex-direction: column;}
 .display-flex2{display: flex;}
 .display-block{display: block;}
 .burger span:last-child {margin-bottom:0px;}
@@ -91,8 +92,8 @@ img.custom-logo{height: 80px; width: auto;}
 .arrow-menu-up::after{content: "▲";} 
 .arrow-menu-down::after,.arrow-menu-up::after{font-size: .8rem;margin-left: .3rem;}
 */
-.arrow-menu-down::after{content: "+";}
-.arrow-menu-up::after{content: "-";}
+.arrow-menu-down::after{content: "+";display: inline-block;width: 33px;}
+.arrow-menu-up::after{content: "-";display: inline-block;width: 33px;}
 #navigation button{font-size: 1.8rem;margin-left: .3rem;background: none!important;color:var(--light-grey);line-height: 1.8rem;
     vertical-align: middle;}
 #navigation button:hover{color:var(--grey)}
@@ -121,6 +122,7 @@ footer #copyrightinfo{font-size: .8rem!important;}
 }
 /* LG */
 @media (min-width: 992px) {
+    #navbar h2.site-slogan{display: none;}
     #navigation{
         position: relative;
         /* z-index: 20; */
@@ -130,18 +132,16 @@ footer #copyrightinfo{font-size: .8rem!important;}
         background: none;
         padding: 1rem 0 0 2rem;
     }
-    #navigation ul{white-space: nowrap;}
+    #navigation ul{white-space: nowrap; margin-top: auto!important; margin-bottom: auto!important;}
     #navigation li{display: inline-block;padding-right: 1rem;}
     #navigation li a,#navigation li.active-menu .sub-menu li a{color: var(--black);}
     #navigation li a:hover,#navigation li.active-menu a,#navigation li.active-menu .sub-menu li a:hover{color: var(--grey);}
     #navigation li a{font-weight: bold; font-size: .9rem;}
     .contact-header{margin-left: auto;margin-right: 0;}
-    ul.sub-menu{position: absolute;padding-top: .5rem!important; background: var(--white); box-shadow:#ccc 5px 1rem 1rem;}
+    header ul.sub-menu{display:none;position: absolute;padding-top: .5rem!important; background: var(--white); box-shadow:#ccc 5px 1rem 1rem;}
     ul.sub-menu li{ padding: .5rem 0;}
     ul.sub-menu li:last-child{border-bottom: none; padding: .5rem 0 0 0;}
-    .sub-menu-color{background: var(--white);}
-    .sub-menu-color li{ border-bottom: solid 1px #ccc;}
-    .sub-menu-color li:last-child{ border-bottom: none;}
+
 }
 @media (min-width: 1200px) {
     .row-nav{max-width:1140px;}

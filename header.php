@@ -19,49 +19,53 @@
 <body id='top' <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header id='header'>
-        <section class='container-fluid' id='header-contact-nav'>
+        <section class='container-fluid' id='header-nav'>
             <div class='container'>
                 <div class='row' id='row-header'>
                     <!-- logo principal -->
-                    <div class='col-9 col-lg-6 py-2 order-first' id='logo-first'>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto' id='logo-link'>
+                    <div class='col-9 col-lg-6 py-2 py-lg-0 order-first d-flex' id='logo-first'>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class='display-inline-block my-auto' id='logo-link' aria-label='Logo <?php bloginfo('name'); ?>'>
                             <?php if (function_exists('the_custom_logo')) {
                                 the_custom_logo();
                             }
-                            do_action('site_info'); 
+                            do_action('site_info');
                             ?>
                         </a>
                     </div>
-                    <!-- Séparation -->
-                    <hr class='col-12 order-4 break-header'></hr>
+                    <!-- navigation -->
+                    <div class='col-3 col-lg-10 order-lg-last d-flex justify-content-end' id='col-nav'>
+                        <?php get_template_part('template-parts/navigation/navigation', 'burger'); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='container-fluid' id='header-contact'>
+            <div class='container'>
+                <div class='row'>
                     <!-- contact header -->
                     <div class=' col-12 col-lg-6 order-last order-lg-2' id='contact-header-container'>
                         <div class='zone-contact d-flex'>
                             <?php do_action('contact_add_to_header'); ?>
                         </div>
                     </div>
-                    <!-- navigation -->
-                    <div class='col-3 col-lg-10 order-lg-last d-flex justify-content-end' id='col-nav'>
-                        <?php get_template_part('template-parts/navigation/navigation', 'burger'); ?>
-                    </div>
-                    <!-- logo menu lg down -->
-                    <div class='col d-none d-lg-flex order-4' id='logo-menu-lg-down'>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='display-inline-block my-auto'>
-                            <div class='display-none' id='logo-menu-scroll'>
-                            <?php if (function_exists('the_custom_logo')) {
-                                the_custom_logo();
-                            }
-                            do_action('site_info'); 
-                            ?>
-                            </div>
-                        </a>
-                    </div>
-
                 </div>
             </div>
-        </section>
-                    
-                </div>
+
+            <!-- logo menu lg down -->
+            <div class='col d-none d-lg-flex order-4' id='logo-menu-lg-down'>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class='display-inline-block my-auto'>
+                    <div class='display-none' id='logo-menu-scroll'>
+                        <?php if (function_exists('the_custom_logo')) {
+                            the_custom_logo();
+                        }
+                        do_action('site_info');
+                        ?>
+                    </div>
+                </a>
             </div>
         </section>
     </header>
+
+
+
+   

@@ -1,9 +1,6 @@
-window.onload = function () {
-    megaMenu();
-};
 window.onscroll = function () {
     stickyToScroll();
-};
+}
 let header = document.getElementById("header");
 let headerNav = document.getElementById("header-nav");
 let rowHeader = document.getElementById("row-header");
@@ -18,7 +15,9 @@ let colNav = document.getElementById("col-nav");
 let logoMenuLgDown = document.getElementById("logo-menu-lg-down");
 if (window.matchMedia("(min-width: 992px)").matches) {
     zoneContact.remove();
+    // Header ordi, dans row-header remplacer le contenu par logo + zone de contact 
     rowHeader.innerHTML =  logo.outerHTML + zoneContact.outerHTML;
+    // nav (logo-menu-lg-down + col-nav ) : créer section après header-contact-nav
     let section = document.createElement("section");
     header.appendChild(section);
     section.classList.add("container-fluid", "bg-white","d-flex");
@@ -62,34 +61,31 @@ function stickyToScroll() {
     }
 }
 function megaMenu(){
-    for ( itemHasChildren of itemsMenu) {
-        let buttonArrowDownMenu = document.createElement("button");
-        buttonArrowDownMenu.setAttribute("type", "button");
-        buttonArrowDownMenu.setAttribute("aria-label", "ouvrir le menu");
-        buttonArrowDownMenu.setAttribute("class", "arrow-menu-down");
-        let idItemParent = itemHasChildren.getAttribute("id");
-        let aItemChild = itemHasChildren.querySelector("a");
-        aItemChild.after(buttonArrowDownMenu);
-        for ( subMenuItems of subMenu) {
-            subMenuItems.classList.add("display-none");
-            subMenuItems.classList.remove("display-flex");
-        }
-        buttonArrowDownMenu.addEventListener("click", function (e) {
-            buttonArrowDownMenu.classList.toggle(idItemParent);
-            buttonArrowDownMenu.classList.toggle("arrow-menu-down");
-            buttonArrowDownMenu.classList.toggle("arrow-menu-up");
-            let parentMenuActive = document.querySelectorAll("#navigation li." + idItemParent);
-            let subMenuActive = parentMenuActive.item(0);
-            subMenuActive.childNodes[3].classList.toggle("display-flex");
-            subMenuActive.childNodes[3].classList.toggle("display-none");
-            subMenuActive.addEventListener("mouseleave", function (e) {
-                if (window.matchMedia("(min-width: 992px)").matches) {
-                    subMenuActive.childNodes[3].classList.remove("display-flex");
-                    subMenuActive.childNodes[3].classList.add("display-none");
-                    buttonArrowDownMenu.classList.add("arrow-menu-down");
-                    buttonArrowDownMenu.classList.remove("arrow-menu-up");
-                }
-            });
-        });
+        // jslint ne recommande par utilisation boucle for mais forEach
+    // il faudra 
+for (let itemHasChildren of itemsMenu) {
+    let buttonArrowDownMenu = document.createElement("button");
+    buttonArrowDownMenu.setAttribute("type", "button");
+    buttonArrowDownMenu.setAttribute("aria-label", "ouvrir le menu");
+    buttonArrowDownMenu.setAttribute("class", "arrow-menu-down");
+    let idItemParent = itemHasChildren.getAttribute("id");
+    let aItemChild = itemHasChildren.querySelector("a");
+    aItemChild.after(buttonArrowDownMenu);
+    console.log(subMenu);
+    for (let subMenuItems of subMenu) {
+        subMenuItems.classList.add("display-none");
+        subMenuItems.classList.remove("display-flex");
     }
+    buttonArrowDownMenu.addEventListener("click", function (e) {
+        buttonArrowDownMenu.classList.toggle(idItemParent);
+        buttonArrowDownMenu.classList.toggle("arrow-menu-down");
+        buttonArrowDownMenu.classList.toggle("arrow-menu-up");
+        // sous menu, mega menu
+        let parentMenuActive = document.querySelectorAll("#navigation li." + idItemParent);
+        // console.log(parentMenuActive);
+        let subMenuActive = parentMenuActive.item(0); // récupérer dans le 1er élément de la NodeList -> <li>
+        subMenuActive.childNodes[3].classList.toggle("display-flex"); // toggle le 3ème enfant de la NodeList -> ul.sub-menu
+        subMenuActive.childNodes[3].classList.toggle("display-none");
+    });
+}
 }
